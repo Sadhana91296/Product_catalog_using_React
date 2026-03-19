@@ -1,4 +1,4 @@
-function About() {
+function About(){
     return (
        <section id="about" className="about-section">
             <h1>About Us</h1>

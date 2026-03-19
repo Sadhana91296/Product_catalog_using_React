@@ -8,7 +8,7 @@ import ProjectList from './components/ProjectList.jsx'
 function App(){
   return (
     <div className="App">
-      <Header/>
+      <Header name="John Doe" profession="Software Developer"/>
       <About/>
       <ProjectList/>
       <Contact/>
