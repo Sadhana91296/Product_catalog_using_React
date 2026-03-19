@@ -1,17 +1,20 @@
 import './App.css'
-import { BrowserRouter, Routes, Route } from 'react-router-dom'
-import Login from './Login.jsx'
+import About from './components/About.jsx'
+import Contact from './components/Contact.jsx'
+import Header from './components/Header.jsx'
+import Footer from './components/Footer.jsx'
+import ProjectList from './components/ProjectList.jsx'
 
-function Home(){ return <div style={{padding:20}}>Home (after login)</div> }
-
-export default function App(){
+function App(){
   return (
-    <BrowserRouter>
-      <Routes>
-        <Route path="/" element={<Login />} />
-        <Route path="/login" element={<Login />} />
-        <Route path="/home" element={<Home />} />
-      </Routes>
-    </BrowserRouter>
-  )
+    <div className="App">
+      <Header/>
+      <About/>
+      <ProjectList/>
+      <Contact/>
+      <Footer/>
+    </div>
+  );
 }
+
+export default App
