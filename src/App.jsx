@@ -1,19 +1,28 @@
 import './App.css'
-import About from './components/About.jsx'
-import Contact from './components/Contact.jsx'
+import { Routes, Route } from 'react-router-dom'
 import Header from './components/Header.jsx'
-import Footer from './components/Footer.jsx'
-import ProjectList from './components/ProjectList.jsx'
+import HomePage from './pages/HomePage.jsx'
+import LoginPage from './pages/LoginPage.jsx'
+import SignUpPage from './pages/SignUpPage.jsx'
+import CartPage from './pages/CartPage.jsx'
+import { CartProvider } from './context/CartContext.jsx'
+import { AuthProvider } from './context/AuthContext.jsx'
 
 function App(){
   return (
-    <div className="App">
-      <Header name="John Doe" profession="Software Developer"/>
-      <About/>
-      <ProjectList/>
-      <Contact/>
-      <Footer/>
-    </div>
+    <AuthProvider>
+      <CartProvider>
+        <div className="App">
+          <Header name="Art By Bebi" job="Handmade Art & Crafts Shop"/>
+          <Routes>
+            <Route path="/" element={<HomePage />} />
+            <Route path="/login" element={<LoginPage />} />
+            <Route path="/signup" element={<SignUpPage />} />
+            <Route path="/cart" element={<CartPage />} />
+          </Routes>
+        </div>
+      </CartProvider>
+    </AuthProvider>
   );
 }
 

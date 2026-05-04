@@ -1,0 +1,128 @@
+#header {
+  padding: 1.25rem 1rem;
+  width: 100%;
+  margin: 0;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.04);
+  background: linear-gradient(180deg, rgba(10,22,40,0.98) 0%, rgba(5,18,32,0.98) 100%);
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+}
+
+#header h1 {
+  color: #ffffff;
+  font-size: 1.75rem;
+  margin-bottom: 0.1rem;
+}
+
+#header .profession-subtitle {
+  color: #a8d0ff;
+  font-size: 0.9rem;
+  margin-bottom: 1rem;
+  font-weight: 500;
+}
+
+.nav-links {
+  display: flex;
+  gap: 2rem;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+.nav-links a {
+  color: #a8d0ff;
+  text-decoration: none;
+  font-weight: 500;
+  padding: 0.5rem 0;
+  border-bottom: 2px solid transparent;
+  transition: all 200ms ease;
+}
+
+.nav-links a:hover {
+  color: #60d2ff;
+  border-bottom-color: #60d2ff;
+}
+
+.nav-btn {
+  background: none;
+  border: none;
+  color: #a8d0ff;
+  text-decoration: none;
+  font-weight: 500;
+  padding: 0.5rem 0;
+  border-bottom: 2px solid transparent;
+  transition: all 200ms ease;
+  cursor: pointer;
+  font-size: 1rem;
+  font-family: inherit;
+}
+
+.nav-btn:hover {
+  color: #60d2ff;
+  border-bottom-color: #60d2ff;
+}
+
+.user-info {
+  color: #a8d0ff;
+  padding: 0.5rem 0;
+  font-weight: 500;
+}
+
+.logout-btn {
+  background: #e74c3c;
+  color: white;
+  border: none;
+  padding: 0.5rem 1rem;
+  border-radius: 4px;
+  cursor: pointer;
+  font-weight: 500;
+  transition: all 200ms ease;
+}
+
+.logout-btn:hover {
+  background: #c0392b;
+  transform: scale(1.02);
+}
+
+.cart-link {
+  position: relative;
+  display: inline-flex;
+  align-items: center;
+  gap: 0.25rem;
+}
+
+.cart-badge {
+  position: absolute;
+  top: -8px;
+  right: -12px;
+  background: #e74c3c;
+  color: white;
+  border-radius: 50%;
+  width: 20px;
+  height: 20px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 0.75rem;
+  font-weight: bold;
+}
+
+@media (max-width: 640px) {
+  #header {
+    padding: 1.5rem 0.75rem;
+  }
+
+  #header h1 {
+    font-size: 1.5rem;
+  }
+
+  .nav-links {
+    gap: 1rem;
+    font-size: 0.9rem;
+  }
+
+  .logout-btn {
+    padding: 0.4rem 0.8rem;
+    font-size: 0.85rem;
+  }
+}
